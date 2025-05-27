@@ -1,0 +1,5 @@
+@APBD_Projekt12_HostAddress = http://localhost:5009
+
+GET {{APBD_Projekt12_HostAddress}}/api/trips?page=1&pageSize=1
+
+###
