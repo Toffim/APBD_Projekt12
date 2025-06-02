@@ -17,7 +17,7 @@ public class TripsController : ControllerBase
         _dbService = dbService;
     }
 
-    // /api/trips?page=9&pageSize=50
+    // /api/trips?page=1&pageSize=50
     [HttpGet]
     public async Task<ActionResult<TripsPaginatedDTO>> GetTrips([FromQuery] int page = 1, [FromQuery] int pageSize = 10)
     {
