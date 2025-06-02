@@ -24,4 +24,11 @@ public class TripsController : ControllerBase
         var trips = await _dbService.GetTripsAsync(page, pageSize);
         return Ok(trips);
     }
+
+    // /api/trips/id/clients
+    [HttpPost("{idTrip}/clients")]
+    public async Task<IActionResult> AssignClientToTrip(int idTrip, [FromBody] AssignClientToTripDTO dto)
+    {
+        return await _dbService.AssignClientToTripAsync(idTrip, dto);
+    }
 }
